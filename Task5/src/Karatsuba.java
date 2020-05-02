@@ -47,10 +47,8 @@ public class Karatsuba {
 
     public static boolean[] binaryRepresentation(int n){
         boolean[] digit = new boolean[(int)Math.floor(Math.log(n)/Math.log(2))+1];
-        int i = 0;
-        while (n > 0){
+        for(int i = 0; i<digit.length;i++){
             if(n % 2 == 1)digit[i]=true;
-            i++;
             n/=2;
         }
         return digit;
